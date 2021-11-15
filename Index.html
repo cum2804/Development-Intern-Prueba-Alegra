@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="IMG/iconAlegra.png" />
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+    <!-- font-family: 'Montserrat', sans-serif; -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- font-family: 'Roboto', sans-serif; -->
+
+    <!-- libreria de bootstrap -->
+    <link rel="stylesheet" href="lib/Bootstrap/bootstrap.min.css">
+
+    <!-- Css style-->
+    <link rel="stylesheet" href="CSS/Style.css">
+
+
+
+    <title>Landing Page</title>
+</head>
+<body>
+
+    <div class="Landing-Encabezado">
+
+        <img class="Leonor mt-5" src="IMG/Leonor corp copia 1.jpg">
+
+        <div class="wave">
+            <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" 
+                style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: rgb(255, 255, 255);"></path></svg>
+            </div>
+        </div>
+
+            <div class="Landing-Encabezado-texto">
+                <h1 class="Lading-Titulo">Software de e-CF certificados por la DGII</h1>
+                <h1>¡La solución completa para tu empresa!</h1>
+                <h4>
+                    Un sistema contable a la medida de tu empresa. Contabilidad 
+                    automatizada, reportes inteligentes, funciones ilimitadas y 
+                    un ejecutivo de cuenta asignado.
+                </h4>
+            </div>
+    </div>
+
+    <div class="container">
+
+        <header class="col-sm-12">
+            <img src="IMG/dark.png" class="container-img-logoAlegra">
+        </header>
+
+       
+
+        <br>
+
+        <div class="row">
+            <div class="card p-3">
+                <form class="d-flex justify-content-center" name="AgendarLlamada">
+                    <div class="d-flex justify-content-center">
+                        <div class="col-sm-3 p-2">
+                            <input class="form-control" type="text" id="NombreCompleto" name="NombreCompleto" placeholder="Nombre completo*" required onkeyup="soloLetras(this )">
+                        </div>
+
+                        <div class="col-sm-3 p-2">
+                            <input class="form-control" type="email" id="Email" name="Email" placeholder="Correo electrónico*" required>
+                        </div>
+
+                        <div class="col-sm-3 p-2">
+                            <input class="form-control" type="number" id="Telefono" name="Telefono" placeholder="Télefono*" required>
+                        </div>
+
+                        <div class="col-sm-3 p-2">
+                            <button class="btn btn-success" type="button" id="Boton" name="Boton" value="Enviar" onclick="ValidarDatos(), ObtenerDatos()"> AGENDAR LLAMADA</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+                <!--******************** Modal *********************-->
+                <div class="modal fade" id="ModalAgendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Llamada agendada</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                                    <form class="d-flex justify-content-center">
+                                        <div class="d-flex justify-content-center">
+            
+                                            <div class="col-sm-4 p-1">
+                                                <input class="form-control" type="text" id="NombreCompletoObtenido" name="NombreCompletoObtenido" readonly>
+                                            </div>
+                    
+                                            <div class="col-sm-4 p-1">
+                                                <input class="form-control" type="email" id="EmailObtenido" name="EmailObtenido" readonly>
+                                            </div>
+                    
+                                            <div class="col-sm-4 p-1">
+                                                <input class="form-control" type="number" id="TelefonoObtenido" name="TelefonoObtenido" readonly>
+                                            </div>
+                    
+                                        </div>
+                                    </form>
+                        
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- /*************************************************** FIN MODAL ****************************************************************/ -->
+        
+        <br>   
+
+        <div class="Landing-partners-img">
+            
+            <div class="d-flex justify-content-around mt-5 col-sm-12">
+                <div class="Landing-partners">
+                    
+                    <div class=" col-sm-3 p-3">
+                        <div class="d-flex">
+                            <div>
+                                <img class="Landing-img1" src="IMG/El día.png" > 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-3 p-4">
+                        <div class="d-flex">
+                            <div>
+                                <img class="Landing-img2" src="IMG/La Nación Dominicana.png" > 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-2 p-4">
+                        <div class="d-flex">
+                            <div>
+                                <img class="Landing-img3" src="IMG/Redacción RD.png" > 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-3" id="img4">
+                        <div class="d-flex">
+                            <div>
+                                <img class="Landing-img4" src="IMG/El Nuevo Diario.png" > 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="d-flex justify-content-center mt-5">
+            <div>
+                <h1>Conoce nuestra </h1> 
+            </div>
+            <div>
+                <h1 class="SolucionCorporativa"> solución corporativa</h1>
+            </div>
+        </div>
+
+        <div class="Landing-info-card mt-5">
+            <div class="card-fila1">
+
+                <div class="card col-sm-3 p-3 m-2">
+                    <div class="d-flex">
+                        <div>
+                            <img class="Landing-info-card" src="IMG/Frame 16.png" width="80px" height="80px"> 
+                        </div>
+                        <div class="col-sm-6 pt-3">
+                            <h3>Ejecutivo de cuenta</h3>
+                        </div>
+                    </div>
+                    <h5>Recibirás el apoyo de un agente especializado, listo para ayudarte.</h5>
+                </div>
+
+                
+                <div class="card col-sm-3 p-2 m-2">
+                    <div class="d-flex">
+                        <div>
+                            <img class="Landing-info-card" src="IMG/Frame 16(1).png"  width="80px" height="80px"> 
+                        </div>
+                        <div class="col-sm-7 pt-3">
+                            <h3>Facturación electrónica</h3>
+                        </div>
+                    </div>
+                    <h5>Emite facturas electrónicas sin limites en ingresos o números de comprobantes</h5>
+                </div>
+             
+
+                <div class="card col-sm-3 p-3 m-2">
+                    <div class="d-flex">
+                        <div>
+                            <img class="Landing-info-card" src="IMG/Frame 16(2).png"  width="80px" height="80px"> 
+                        </div>
+                        <div class="col-sm-8 pt-2">
+                            <h3>Contabilidad automatizada</h3>
+                        </div>
+                    </div>
+                    <h5>Ingresa tus ventas. Alegra se encarga de lo demás.</h5>
+                </div>
+            </div>
+
+            <div class="card-fila2">
+                <div class="card col-sm-3 p-3 m-2">
+                    <div class="d-flex">
+                        <div>
+                            <img class="Landing-info-card" src="IMG/Frame 16(5).png"  width="80px" height="80px"> 
+                        </div>
+                        <div class="col-sm-7 pt-2">
+                            <h3>Reportes inteligentes</h3>
+                        </div>
+                    </div>
+                    <h5>Accede a reportes contables cuando lo necesites y siempre actualizados.</h5>
+                </div>
+
+                <div class="card col-sm-3 p-3 m-2">
+                    <div class="d-flex">
+                        <div>
+                            <img class="Landing-info-card" src="IMG/Frame 16(4).png"  width="80px" height="80px"> 
+                        </div>
+                        <div class="col-sm-8 pt-2">
+                            <h3>Integración con otros sistemas</h3>
+                        </div>
+                    </div>
+                    <h5>Concecta Alegra con tus plataformas favoritas en tan solo un clic.</h5>
+                </div>
+
+                <div class="card col-sm-3 p-2 m-2"> 
+                    <div class="d-flex">
+                        <div>
+                            <img class="Landing-info-card" src="IMG/Frame 16(3).png"  width="80px" height="80px"> 
+                        </div>
+                        <div class="col-sm-8 pt-4">
+                            <h3>Centro de costos</h3>
+                        </div>
+                    </div>
+                    <h5>Controla cada uno de tus proyectos monitoreando tus recursos en tiempo real.</h5>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="Landing-info-Apps">
+
+            <div class="d-flex col-sm-12">
+                <div class="col-sm-6">
+                    <div class="imgGroup" >
+                        <img src="IMG/Group 608.png" width="500px" height="400px">   
+                    </div>
+                </div>
+
+                <div class="col-sm-6"> 
+                    <!-- style="display: flex; flex-wrap: wrap;" -->
+                    <div class="Landing-info-Apps-text">
+                        <p>
+                            <p class="color-green">Toma el control</p>
+                            <p class="color-gray"> de tu empresa</p> 
+                            <p class="color-green"> desde cualquier lugar</p> 
+                            <p class="color-gray"> con la app móvil.</p>
+                        </p>
+
+                        <ul>
+                            <li type="disc">Crea facturas de venta y cotizaciones de forma ágil y sencilla.</li>
+                            <li type="disc">Crea productos y servicios con un par de clics.</li>
+                            <li type="disc">Consulta tu inventario, facturas y cotizaciones desde casa.</li>
+                            <li type="disc">Registra en segundos tus facturas de proveedores y agrega los pagos que realices.</li>
+                            <li type="disc">Gestiona tus gastos en tiempo real.</li>
+                        </ul>
+
+                        <img class="Landing-info-Apps-Appstore" src="IMG/Descarga de appstore 2.png" width="170px" height="50px">
+                        <img class="Landing-info-Apps-googleplay" src="IMG/Descarga de Google play 2.png" width="170px" height="50px">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+        <footer class="Landing-Empresas">
+
+    
+            
+            <img class="Landing-Empresas-img" src="IMG/Empresas.png">
+
+            <div class="wave-footer">
+                <div style="height: 150px; overflow: hidden; margin-top: 50px;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" 
+                    style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" 
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path></svg>
+                </div>            
+            </div>
+
+            
+
+            <div class="d-flex justify-content-center">
+                <div class="Landing-Empresas-texto">
+                    <p>Empresas que crecen junto a alegra</p>
+                </div>
+            </div>
+
+                    <div class="d-flex justify-content-around">
+                        <div class="col-sm-3">
+                            <img class="Landing-Empresas__footer" src="IMG/Albem.png"> 
+                        </div>
+
+                        <div class="col-sm-3">
+                            <img class="Landing-Empresas__footer" src="IMG/Jeunesse.png"> 
+                        </div>
+
+                        <div class="col-sm-3">
+                            <img class="Landing-Empresas__footer" src="IMG/Proyecto Ajach.png"> 
+                        </div>
+
+                        <div class="col-sm-3">
+                            <img class="Landing-Empresas__footer" src="IMG/Rudo motos.png"> 
+                        </div>
+                        
+                    </div>
+            
+        </footer> 
+
+        <footer class="Landing-Empresa_foo">    
+            <p>COPYRIGHT &copy; 2020 soluciones Alegra S.A.S.</p>
+        </footer>
+
+        
+        
+        
+
+
+
+    <script src="lib/libreriaQuery/jquery-3.6.0.js"></script>
+    <!-- libreria de bootstrap -->
+    <script src="lib/Bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="lib/libreriaAlert/sweetalert2@10.js"></script>
+
+    <script src="JS/Script.js"></script>
+</body>
+</html>
